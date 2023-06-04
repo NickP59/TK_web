@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\tk_web.props" />
+</Project>

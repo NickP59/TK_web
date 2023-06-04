@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    @await Html.PartialAsync("Partial/MetatagsPartial")
+    <!-- Links & CSS -->
+    @await Html.PartialAsync("Partial/CssPartial")
+</head>
+
+<body>
+    <div class="container-fluid position-relative d-flex p-0"> 
+
+        <!-- Spinner --> 
+        @await Html.PartialAsync("Partial/SpinnerPartial")
+        <!-- Sidebar Start -->        
+        @await Html.PartialAsync("Partial/SidebarPartial")
+        <!-- Content -->
+        <div class="content">
+            <!-- Navbar -->
+            @await Html.PartialAsync("Partial/Content/NavBarPartial")
+            @RenderBody()
+            <!-- Footer -->
+            @await Html.PartialAsync("Partial/Content/FooterPartial")
+        </div>
+        <!-- Back to Top -->
+        @await Html.PartialAsync("Partial/BackToTopPartial")
+    </div>
+    @await Html.PartialAsync("Partial/ModalFormPartial")
+    <!-- JavaScript Libraries -->
+    @await Html.PartialAsync("Partial/ScriptsPartial")
+    @await RenderSectionAsync("pageScripts", required: false)
+</body>
+
+
+
+</html>
+

@@ -1,0 +1,63 @@
+﻿@using tk_web.Domain.ViewModels.Booking
+@model List<tk_web.Domain.Models.Booking>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-secondary text-center rounded p-4">
+
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Бронирование</h6>
+            <button class="btn btn-sm btn-primary" onclick="openModal({ url: '/Booking/Save', data: '0' })"
+                    data-toggle="ajax-modal" data-target="Model">
+                Добавить
+            </button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-white">
+                        <th scope="col">Участник</th>
+                        <th scope="col">Мероприятие</th>
+                        <th scope="col">Снаряжение</th>
+                        <th scope="col">Дата выдачи</th>
+                        <th scope="col">Дата сдачи</th>
+                        <th scope="col">#</th>
+                        <th scope="col">#</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        foreach (var booking in Model)
+                        {
+                            <tr>
+                                <td>@booking.Participant.FullName</td>
+                                <td>@booking.Event.Name</td>
+                                <td>@booking.Equipment.Name</td>
+                                <td>@booking.IsuueDate</td>
+                                <td>@booking.HandoverDate</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary" onclick="openModal({ url: '/Booking/Save', data: '@booking.Id' })"
+                                            data-toggle="ajax-modal" data-target="Model">Редактировать
+                                    </button>
+                                </td>  
+                                <td>
+                                    <form asp-controller="Booking" asp-action="DeleteBooking" asp-route-id="@booking.Id" method="post">
+                                        <button class="btn btn-sm btn-primary">Удалить</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody> 
+            </table>
+        </div>
+    </div>
+</div>
+
+
+@section pageScripts
+{
+<script src="~/js/modal.js"></script>
+
+}                           

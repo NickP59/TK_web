@@ -1,0 +1,56 @@
+﻿@using tk_web.Domain.ViewModels.EquipmentPlace
+@model List<tk_web.Domain.Models.EquipmentPlace>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-secondary text-center rounded p-4">
+
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Склады</h6>
+            <button class="btn btn-sm btn-primary" onclick="openModal({ url: '/EquipmentPlace/Save', data: '0' })"
+                    data-toggle="ajax-modal" data-target="Model">
+                Добавить
+            </button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-white">
+                        <th scope="col">Название</th>
+                        <th scope="col">#</th>
+                        <th scope="col">#</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        foreach (var place in Model)
+                        {
+                            <tr>
+
+                                <td>@place.Name</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary" onclick="openModal({ url: '/EquipmentPlace/Save', data: '@place.Id' })"
+                                            data-toggle="ajax-modal" data-target="Model">
+                                        Редактировать
+                                    </button>
+                                </td>
+                                <td>
+                                    <form asp-controller="EquipmentPlace" asp-action="DeleteEquipmentPlace" asp-route-id="@place.Id" method="post">
+                                        <button class="btn btn-sm btn-primary">Удалить</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+@section pageScripts
+    {
+    <script src="~/js/modal.js"></script>
+}

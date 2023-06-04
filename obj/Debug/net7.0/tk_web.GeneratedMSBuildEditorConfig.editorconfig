@@ -1,0 +1,101 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = tk_web
+build_property.RootNamespace = tk_web
+build_property.ProjectDir = E:\ВШЭ\2 курс\практика\tk_web\tk_web\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\ВШЭ\2 курс\практика\tk_web\tk_web
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Booking/BookingForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xCb29raW5nRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Booking/ShowBookings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xTaG93Qm9va2luZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/EquipmentPlace/ShowEquipmentPlaces.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50UGxhY2VcU2hvd0VxdWlwbWVudFBsYWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/EquipmentType/ShowEquipmetTypes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50VHlwZVxTaG93RXF1aXBtZXRUeXBlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Equipment/ShowEquipments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50XFNob3dFcXVpcG1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Events/ShowEvents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRzXFNob3dFdmVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Groups/ShowGroups.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBzXFNob3dHcm91cHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Participants/ShowParticipants.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRzXFNob3dQYXJ0aWNpcGFudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Positions/ShowPositions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaXRpb25zXFNob3dQb3NpdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Shared/Partial/BackToTopPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcQmFja1RvVG9wUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Shared/Partial/Content/FooterPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcQ29udGVudFxGb290ZXJQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Shared/Partial/Content/NavBarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcQ29udGVudFxOYXZCYXJQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Shared/Partial/CssPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcQ3NzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Shared/Partial/MetatagsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcTWV0YXRhZ3NQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Shared/Partial/ModalFormPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcTW9kYWxGb3JtUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Shared/Partial/ScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Shared/Partial/SidebarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcU2lkZWJhclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Shared/Partial/SpinnerPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcU3Bpbm5lclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ВШЭ/2 курс/практика/tk_web/tk_web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,184 @@
+﻿@model tk_web.Domain.ViewModels.Booking.BookingViewModel
+
+<!-- Form Start -->
+
+<style>
+    .select2-container {
+        z-index: 2000; /* Установите значение больше 1050 */
+    }
+</style>
+
+
+<form id="formSaveBooking">
+    <input asp-for="@Model.Id" hidden/>
+    <div asp-validation-summary="All"></div>
+    <div class="row mb-3">
+        <label  class="col-sm-2 col-form-label">Участник</label>
+        <div>
+            <select asp-for="@Model.ParticipantId" class="form-control" id="bookingParticipantId" style="width: 100%" >
+                @*<option value>@Model.Participant</option>*@
+            </select>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Мероприятие</label>
+        <div>
+            <select asp-for="@Model.EventId" class="form-select mb-3" id="bookingEventId" style="width: 100%">
+                @*<option selected>@Model.Event_</option>*@
+            </select>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Снаряжение</label>
+        <div>
+            <select asp-for="@Model.EquipmentId" class="form-select mb-3" id="bookingEquipmentId" style="width: 100%">
+                @*<option selected>@Model.Equipment</option>*@
+            </select>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+    <label asp-for="@Model.IsuueDate" class="col-sm-2 col-form-label">Дата выдачи</label>
+        <div class="col-sm-10">
+            <input class="form-control" asp-for="@Model.IsuueDate">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+    <label asp-for="@Model.HandoverDate" class="col-sm-2 col-form-label">Дата сдачи</label>
+        <div class="col-sm-10">
+            <input class="form-control" asp-for="@Model.HandoverDate">
+        </div>
+    </div>
+
+</form>
+
+
+
+<!-- Form End -->
+
+
+
+<script src="~/lib/select2/js/select2.full.min.js"></script>
+<script>
+
+    $('#bookingParticipantId').select2({
+        placeholder: "Выберите участника",
+        minimumInputLength: 0,
+        allowClear: true,
+        ajax: {
+            type: "POST",
+            url: "@Url.Action("GetParticipant", "Booking")",
+            dataType: "json",
+            data: function (params) {
+                var query = {
+                    term: params.term,
+                    page: params.page || 1,
+                    pageSize: params.pageSize || 5
+                };
+                return query;
+            },
+            processResults: function (result) {
+                return {
+                    results: $.map(result, function (val, index) {
+                        return {
+                            id: index,
+                            text: val
+                        };
+                    }),
+                };
+            }
+        }
+    });
+
+    $('#bookingEventId').select2({
+        placeholder: "Выберите мероприятие",
+        minimumInputLength: 0,
+        allowClear: true,
+        ajax: {
+            type: "POST",
+            url: "@Url.Action("GetEvent", "Booking")",
+            dataType: "json",
+            data: function (params) {
+                var query = {
+                    term: params.term,
+                    page: params.page || 1,
+                    pageSize: params.pageSize || 5
+                };
+                return query;
+            },
+            processResults: function (result) {
+                return {
+                    results: $.map(result, function (val, index) {
+                        return {
+                            id: index,
+                            text: val
+                        };
+                    }),
+                };
+            }
+        }
+    });
+
+    $('#bookingEquipmentId').select2({
+        placeholder: "Выберите снаряжение",
+        minimumInputLength: 0,
+        allowClear: true,
+        ajax: {
+            type: "POST",
+            url: "@Url.Action("GetEquipment", "Booking")",
+            dataType: "json",
+            data: function (params) {
+                var query = {
+                    term: params.term,
+                    page: params.page || 1,
+                    pageSize: params.pageSize || 5
+                };
+                return query;
+            },
+            processResults: function (result) {
+                return {
+                    results: $.map(result, function (val, index) {
+                        return {
+                            id: index,
+                            text: val
+                        };
+                    }),
+                };
+            }
+        }
+    });
+    
+
+    //let modal = $('#modal');
+
+    $('#saveBtn').on('click', function () {
+        const data = $('#formSaveBooking').serialize()
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("Save")',
+            data: data,
+            success: function (data) {
+                Swal.fire({
+                    title: 'Бронирование добавлено',
+                    text: data.description,
+                    icon: 'success',
+                    confirmButtonText: 'Окей'
+                })
+                //modal.modal('hide')
+            },
+            error: function (response) {
+                Swal.fire({
+                    title: 'Ошибка',
+                    text: response.responseJSON.errorMessage,
+                    icon: 'error',
+                    confirmButtonText: 'Окей'
+                })
+            }
+        })
+    });
+</script>
+
+           

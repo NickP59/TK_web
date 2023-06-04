@@ -1,0 +1,63 @@
+﻿@using tk_web.Domain.ViewModels.Equipment
+@model List<tk_web.Domain.Models.Equipment>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-secondary text-center rounded p-4">
+
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Снаряжение</h6>
+            <button class="btn btn-sm btn-primary" onclick="openModal({ url: '/Equipment/Save', data: '0' })"
+                    data-toggle="ajax-modal" data-target="Model">
+                Добавить
+            </button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-white">
+                        <th scope="col">Тип</th>
+                        <th scope="col">Название</th>
+                        <th scope="col">Описание</th>
+                        <th scope="col">Заметки</th>
+                        <th scope="col">Склад</th>
+                        <th scope="col">#</th>
+                        <th scope="col">#</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        foreach (var equipment in Model)
+                        {
+                            <tr>
+                                <td>@equipment.Type.Type</td>
+                                <td>@equipment.Name</td>
+                                <td>@equipment.Description</td>
+                                <td>@equipment.Notes</td>
+                                <td>@equipment.Place.Name</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary" onclick="openModal({ url: '/Equipment/Save', data: '@equipment.Id' })"
+                                            data-toggle="ajax-modal" data-target="Model">
+                                        Редактировать
+                                    </button>
+                                </td>
+                                <td>
+                                    <form asp-controller="Equipment" asp-action="DeleteEquipment" asp-route-id="@equipment.Id" method="post">
+                                        <button class="btn btn-sm btn-primary">Удалить</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+@section pageScripts
+    {
+    <script src="~/js/modal.js"></script>
+}                           
